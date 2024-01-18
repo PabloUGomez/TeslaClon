@@ -1,0 +1,28 @@
+---
+import TeslaIcon from "../components/icons/Tesla.astro";
+import SupportIcon from "../components/icons/Support.astro";
+import LenguageIcon from "../components/icons/Lenguage.astro";
+import UserIcon from "../components/icons/User.astro";
+---
+
+<header class="py-6 px-10 flex justify-between items-center w-full z-40">
+  <div class="flex flex-grow basis-0">
+    <TeslaIcon />
+  </div>
+  <nav>
+    <ul class="flex text-sm [&>li]:font-medium [&>li]:text-current [&>li]:inline-block [&>li]:px-4 [&>li]:py-2">
+      <li>Vehicules</li>
+      <li>Energy</li>
+      <li>Charging</li>
+      <li>Discover</li>
+      <li><a href="https://shop.tesla.com/"></a>Shop</li>
+    </ul>
+  </nav>
+  <nav class="flex flex-grow basis-0 justify-end">
+    <ul class="flex text-sm [&>li]:inline-block [&>li]:px-2 [&>li]:py-1">
+      <li><SupportIcon /></li>
+      <li><LenguageIcon /></li>
+      <li><a href="https://www.tesla.com/teslaaccount"><UserIcon /></a></li>
+    </ul>
+  </nav>
+</header>

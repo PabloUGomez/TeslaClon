@@ -1,271 +1,297 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import HeroSection from "../components/HeroSection.astro";
-import Section from "../components/Section.astro";
+import Layout from '../layouts/Layout.astro'
+import Section from '../components/Section.astro'
+import ImageRender from '../components/ImageRender.astro'
 ---
 
-<Layout title="Tesla Clon">
+<Layout title='Tesla Clon'>
   <main
-    class="snap-y snap-mandatory relative w-full h-screen overflow-auto overflow-x-hidden"
+    class='snap-y snap-mandatory relative w-full h-screen overflow-auto overflow-x-hidden'
   >
-    <div class="snap-center">
+    <div class='snap-center'>
       <Section
-        color="black"
-        title="Model 3"
-        subtitle="Lease starting at $329/mo*"
+        color='black'
+        title='Model 3'
+        subtitle='Lease starting at $329/mo*'
       >
-        <img
-          slot="background"
-          class="object-cover object-center h-full w-screen"
-          src="/images/model3.jpg"
+        <ImageRender
+          slot='background'
+          src='/images/model3.jpg'
+          srcMovile='/images/model3Movile.avif'
+          alt='Model 3'
         />
-        <footer class="flex flex-col justify-between" slot="footer">
-          <span class="text-sm font-medium pb-4">
-            <a class="bg-white/70 text-slate-700 py-3 px-20 rounded mx-2"
+        <footer class='flex flex-col justify-between' slot='footer'>
+          <span class='sm:text-sm font-medium pb-4 text-xs'>
+            <a
+              class='bg-white/70 text-slate-700 py-3 sm:px-20 px-10 rounded mx-2'
               >Custom Order</a
             >
-            <a class="bg-black/70 text-white/90 py-3 px-20 rounded mx-2"
+            <a
+              class='bg-black/70 text-white/90 py-3 sm:px-20 px-10 rounded mx-2'
               >Learn More</a
             >
           </span>
-          <p class="text-xs py-5 text-slate-900">
+          <p class='text-xs sm:max-w-full max-w-xs py-5 text-slate-900'>
             *Excludes taxes and fees with price subject to change. Available in
             select states. <a
-              href="https://www.tesla.com/modely/design?financeModalTab=finance_options#overview"
+              href='https://www.tesla.com/modely/design?financeModalTab=finance_options#overview'
               >See Details</a
             >
           </p>
         </footer>
       </Section>
     </div>
-    <div class="snap-center">
+    <div class='snap-center'>
       <Section
-        color="white"
-        title="Model Y"
-        subtitle="Lease starting at $399/mo*"
+        color='white'
+        title='Model Y'
+        subtitle='Lease starting at $399/mo*'
       >
         <video
-          slot="background"
+          slot='background'
           autoplay
           muted
           loop
-          class="object-cover object-center h-full w-screen"
-          src="/Homepage-Model-Y-Desktop-NA-v2.mp4"></video>
-        <footer class="flex flex-col justify-between" slot="footer">
-          <span class="text-sm font-medium pb-4">
-            <a class="bg-white/70 text-black py-3 px-20 rounded mx-2"
+          class='object-cover object-center h-full w-screen'
+          src='/Homepage-Model-Y-Desktop-NA-v2.mp4'></video>
+
+        <footer class='flex flex-col justify-between' slot='footer'>
+          <span class='sm:text-sm font-medium pb-4 text-xs'>
+            <a class='bg-white/70 text-black py-3 sm:px-20 px-10 rounded mx-2'
               >Custom Order</a
             >
-            <a class="bg-black/70 py-3 px-20 rounded mx-2">Demo Drive</a>
+            <a class='bg-black/70 py-3 sm:px-20 px-10 rounded mx-2'
+              >Demo Drive</a
+            >
           </span>
-          <p class="text-xs py-5">
+          <p class='text-xs sm:max-w-full max-w-xs py-5 text-white'>
             *Excludes taxes and fees with price subject to change. Available in
             select states. <a
-              href="https://www.tesla.com/modely/design?financeModalTab=finance_options#overview"
+              href='https://www.tesla.com/modely/design?financeModalTab=finance_options#overview'
               >See Details</a
             >
           </p>
         </footer>
       </Section>
     </div>
-    <div class="snap-center sla">
+    <div class='snap-center sla'>
       <Section
-        color="rgb(2, 6, 23)"
-        title="Model X"
-        subtitle="From $68,590*"
-        description="After Federal Tax Credit & Est. Gas Savings"
+        color='black'
+        title='Model X'
+        subtitle='From $68,590*'
+        description='After Federal Tax Credit & Est. Gas Savings'
       >
-        <img
-          slot="background"
-          class="object-cover object-center h-full w-screen"
-          src="/images/modelx.avif"
+        <ImageRender
+          slot='background'
+          src='/images/modelx.avif'
+          srcMovile='/images/modelXMovile.avif'
+          alt='Model X'
         />
-        <footer class="flex flex-col justify-between" slot="footer">
-          <span class="text-sm font-medium pb-4">
-            <a class="bg-white/70 text-slate-950 py-3 px-20 rounded mx-2"
+        <footer
+          class='flex flex-col justify-between items-center'
+          slot='footer'
+        >
+          <span class='sm:text-sm font-medium pb-4 text-xs'>
+            <a class='bg-white/70 text-black py-3 sm:px-20 px-10 rounded mx-2'
               >Custom Order</a
             >
-            <a class="bg-black/60 text-white/90 py-3 px-20 rounded mx-2"
+            <a
+              class='bg-black/60 text-white/90 py-3 sm:px-20 px-10 rounded mx-2'
               >Demo Drive</a
             >
           </span>
-          <p class="text-xs py-5 text-white">
+          <p class='text-xs sm:max-w-full max-w-xs py-5 text-white'>
             *Price before incentives and savings is $79,990, excluding taxes and
             fees. Subject to change. <br />
             <a
-              href="https://www.tesla.com/modely/design?financeModalTab=finance_options#overview"
+              href='https://www.tesla.com/modely/design?financeModalTab=finance_options#overview'
               >Learn about est. gas savings.</a
             >
           </p>
         </footer>
       </Section>
     </div>
-    <div class="snap-center">
+    <div class='snap-center'>
       <Section
-        color="rgb(2, 6, 23)"
-        title="Model S"
-        subtitle="From $71,090*"
-        description="After Est. Gas Savings"
+        color='black'
+        title='Model S'
+        subtitle='From $71,090*'
+        description='After Est. Gas Savings'
       >
-        <img
-          slot="background"
-          class="object-cover object-center h-full w-screen"
-          src="/images/modelS.jpg"
+        <ImageRender
+          slot='background'
+          src='/images/modelS.jpg'
+          srcMovile='/images/ModelSMovile.avif'
+          alt='Model S'
         />
-        <footer class="flex flex-col justify-between" slot="footer">
-          <span class="text-sm font-medium pb-4">
-            <a class="bg-white/70 text-slate-950 py-3 px-20 rounded mx-2"
+        <footer class='flex flex-col justify-between' slot='footer'>
+          <span class='sm:text-sm font-medium pb-4 text-xs'>
+            <a class='bg-white/70 text-black py-3 sm:px-20 px-10 rounded mx-2'
               >Custom Order</a
             >
-            <a class="bg-black/60 text-white/90 py-3 px-20 rounded mx-2"
+            <a
+              class='bg-black/60 text-white/90 py-3 sm:px-20 px-10 rounded mx-2'
               >Demo Drive</a
             >
           </span>
-          <p class="text-xs py-5 text-pretty text-slate-950">
+          <p class='text-xs sm:max-w-full max-w-xs py-5 text-slate-950'>
             *Price before savings is $74,990, excluding taxes and fees. Subject
             to change. <br />
             <a
-              href="https://www.tesla.com/modely/design?financeModalTab=finance_options#overview"
+              href='https://www.tesla.com/modely/design?financeModalTab=finance_options#overview'
               >Learn about est. gas savings.</a
             >
           </p>
         </footer>
       </Section>
     </div>
-    <div class="snap-center">
-      <Section color="rgb(2, 6, 23)">
-        <img
-          slot="background"
-          class="object-cover object-center h-full w-screen"
-          src="/images/cyberTruck.jpg"
+    <div class='snap-center'>
+      <Section color='black'>
+        <ImageRender
+          slot='background'
+          src='/images/cyberTruck.jpg'
+          srcMovile='/images/cyberTruckMovile.avif'
+          alt='Tesla Roadster'
         />
-        <footer class="flex flex-col justify-between" slot="footer">
-          <span class="text-sm font-medium mb-10">
-            <a class="bg-white/70 text-slate-950 py-3 px-20 rounded mx-2"
+        <footer class='flex flex-col justify-between' slot='footer'>
+          <span class='sm:text-sm font-medium pb-4 text-xs mb-10'>
+            <a
+              class='bg-white/70 text-slate-950 py-3 sm:px-20 px-10 rounded mx-2'
               >Order Now</a
             >
-            <a class="bg-black/60 text-white/90 py-3 px-20 rounded mx-2"
+            <a
+              class='bg-black/60 text-white/90 py-3 sm:px-20 px-10 rounded mx-2'
               >Learn More</a
             >
           </span>
-          <p class="text-xs py-5"></p>
+          <p class='text-xs py-5'></p>
         </footer>
       </Section>
     </div>
-    <div class="snap-center">
+    <div class='snap-center'>
       <Section
-        color="white"
-        title="Experience Tesla"
-        subtitle="Schedule a Demo Drive Today"
+        color='white'
+        title='Experience Tesla'
+        subtitle='Schedule a Demo Drive Today'
       >
         <video
-          slot="background"
+          slot='background'
           autoplay
           muted
           loop
-          class="object-cover object-center h-full w-screen"
-          src="/DemoDrive.webm"></video>
-        <footer class="flex flex-col justify-between" slot="footer">
-          <span class="text-sm font-medium mb-24 ">
-            <a class=" border-2  text-white py-2 px-20 rounded mx-2"
-              >Demo Drive</a
+          class='object-cover object-center h-full w-screen hidden md:flex'
+          src='/DemoDrive.webm'></video>
+        <video
+          slot='background'
+          autoplay
+          muted
+          loop
+          class='object-cover object-center h-full w-screen flex md:hidden'
+          src='/ExperinceTeslaMovile.webm'></video>
+        <footer class='flex flex-col justify-between' slot='footer'>
+          <span class='text-sm font-medium mb-24'>
+            <a class='border-2 text-white py-2 px-20 rounded mx-2'>Demo Drive</a
             >
           </span>
         </footer>
       </Section>
     </div>
-    <div class="snap-center">
+    <div class='snap-center'>
       <Section
-        color="rgb(2, 6, 23)"
-        title="Solar Panels"
-        subtitle="Schedule a Virtual Consultation"
+        color='black'
+        title='Solar Panels'
+        subtitle='Schedule a Virtual Consultation'
       >
         <img
-          slot="background"
-          class="object-cover object-center h-full w-screen"
-          src="/images/SolarPanels.avif"
+        class="object-cover object-center h-full w-screen"
+          slot='background'
+          src='/images/SolarPanels.avif'
+          alt='Solar Panels'
         />
-        <footer class="flex flex-col justify-between" slot="footer">
-          <span class="text-sm font-medium mb-24">
-            <a class="bg-white/70 text-slate-950 py-3 px-20 rounded mx-2"
+        <footer class='flex flex-col justify-between' slot='footer'>
+          <span class='sm:text-sm font-medium pb-4 text-xs mb-24'>
+            <a
+              class='bg-white/70 text-slate-950 py-3 sm:px-20 px-10 rounded mx-2'
               >Order Now</a
             >
-            <a class="bg-black/50 text-white/90 py-3 px-20 rounded mx-2"
+            <a
+              class='bg-black/50 text-white/90 py-3 sm:px-20 px-10 rounded mx-2'
               >Learn More</a
             >
           </span>
         </footer>
       </Section>
     </div>
-    <div class="snap-center">
+    <div class='snap-center'>
       <Section
-        color="rgb(2, 6, 23)"
-        title="Solar Roof"
-        subtitle="Produce Clean Energy From Your Roof"
+        color='black'
+        title='Solar Roof'
+        subtitle='Produce Clean Energy From Your Roof'
       >
-        <img
-          slot="background"
-          class="object-cover object-center h-full w-screen"
-          src="/images/SolarRoof.avif"
+        <ImageRender
+          slot='background'
+          src='/images/SolarRoof.avif'
+          srcMovile='/images/solarRoofMovile.avif'
+          alt='Solar Roof'
         />
-        <footer class="flex flex-col justify-between" slot="footer">
-          <span class="text-sm font-medium mb-24">
-            <a class="bg-white/70 text-slate-950 py-3 px-20 rounded mx-2"
+        <footer class='flex flex-col justify-between' slot='footer'>
+          <span class='sm:text-sm font-medium pb-4 text-xs mb-24'>
+            <a
+              class='bg-white/70 text-slate-950 py-3 sm:px-20 px-10 rounded mx-2'
               >Order Now</a
             >
-            <a class="bg-black/60 text-white/90 py-3 px-20 rounded mx-2"
+            <a
+              class='bg-black/60 text-white/90 py-3 sm:px-20 px-10 rounded mx-2'
               >Learn More</a
             >
           </span>
         </footer>
       </Section>
     </div>
-    <div class="snap-center">
-      <Section
-        color="rgb(2, 6, 23)"
-        title="Powerwall"
-      >
-        <img
-          slot="background"
-          class="object-cover object-center h-full w-screen"
-          src="/images/Powerwall.jpg"
+    <div class='snap-center'>
+      <Section color='black' title='Powerwall'>
+        <ImageRender
+          slot='background'
+          src='/images/Powerwall.jpg'
+          srcMovile='/images/powerwallMovile.avif'
+          alt='Powerwall'
         />
-        <footer class="flex flex-col justify-between" slot="footer">
-          <span class="text-sm font-medium mb-24">
-            <a class="bg-white/70 text-slate-950 py-3 px-20 rounded mx-2"
+        <footer class='flex flex-col justify-between' slot='footer'>
+          <span class='sm:text-sm font-medium pb-4 text-xs mb-24'>
+            <a
+              class='bg-white/70 text-slate-950 py-3 sm:px-20 px-10 rounded mx-2'
               >Order Now</a
             >
-            <a class="bg-black/60 text-white/90 py-3 px-20 rounded mx-2"
+            <a
+              class='bg-black/60 text-white/90 py-3 sm:px-20 px-10 rounded mx-2'
               >Learn More</a
             >
           </span>
         </footer>
       </Section>
     </div>
-    <div class="snap-center">
-      <Section
-        color="rgb(2, 6, 23)"
-        title="Accessories"
-      >
-        <img
-          slot="background"
-          class="object-cover object-center h-full w-screen"
-          src="/images/Accessories.jpg"
+    <div class='snap-center'>
+      <Section color='black' title='Accessories'>
+        <ImageRender
+          slot='background'
+          src='/images/Accessories.jpg'
+          srcMovile='/images/accessoriesMovile.avif'
+          alt='Accessories'
         />
-        <footer class="flex flex-col justify-between" slot="footer">
-          <span class="text-sm font-medium pb-4">
-            <a class="bg-white text-slate-950 py-3 px-20 rounded mx-2"
+        <footer class='flex flex-col justify-between' slot='footer'>
+          <span class='sm:text-sm font-medium pb-4 text-xs'>
+            <a class='bg-white text-slate-950 py-3 sm:px-20 px-10 rounded mx-2'
               >Shop Now</a
             >
           </span>
-          <ul class="flex py-7 text-xs gap-x-4 font-medium text-gray-300">
+          <ul class='flex py-7 text-xs gap-x-4 font-medium text-gray-300'>
             <li>Tesla © 2024</li>
             <li>Privacy & Legal</li>
             <li>Vehicle Recalls</li>
-            <li>Contact</li>
+            <li class='sm:block hidden'>Contact</li>
             <li>News</li>
-            <li>Get Updates</li>
-            <li>Locations</li>
+            <li class='sm:block hidden'>Get Updates</li>
+            <li class='sm:block hidden'>Locations</li>
           </ul>
         </footer>
       </Section>

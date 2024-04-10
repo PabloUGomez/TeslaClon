@@ -4,10 +4,9 @@ export default {
 	darkMode: 'media', // or 'media' or 'class'
 	theme: {
 		fontFamily: {
-			sans: ['Gotham SSm A , sans-serif'],
 		},
 		extend: {},
 		
 	},
-	plugins: [],
+	plugins: [require("daisyui")],
 }

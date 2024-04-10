@@ -1,0 +1,19 @@
+---
+const { src, srcMovile, alt } = Astro.props
+
+---
+
+<img
+  slot='background'
+  loading='lazy'
+  class='object-cover object-center h-full w-screen md:flex hidden'
+  src={src}
+  alt={alt}
+/>
+<img
+  slot='background'
+  loading='lazy'
+  class='object-cover object-center h-full w-screen md:hidden flex'
+  src={srcMovile}
+  alt={alt}
+/>

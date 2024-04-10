@@ -1,22 +1,22 @@
 ---
-const { color, title, subtitle, description } = Astro.props;
-const textColor = `text-${color}`;
+const { color, title, subtitle, description, dataColorMovile } = Astro.props
+const textColor = `text-${color}`
 ---
 
 <section
-  class="landing-section bg-black h-screen w-screen text-center overflow-hidden relative flex justify-center"
+  class=`landing-section bg-black h-screen w-screen text-center overflow-hidden relative flex justify-center ${textColor}`
   data-color={color}
 >
   <div class=`${textColor} relative z-30 flex flex-col justify-between`>
     <header>
-      <h2 class="pt-20 text-[40px] font-medium">{title}</h2>
-      <p class="text-xl">{subtitle}</p>
-      <p class="text-xs p-1">{description}</p>
+      <h2 class='pt-20 text-[40px] font-medium'>{title}</h2>
+      <p class='text-xl'>{subtitle}</p>
+      <p class='text-xs p-1'>{description}</p>
     </header>
-    <slot name="footer" />
+    <slot name='footer' />
   </div>
 
-  <div class="absolute top-0 bottom-0">
-    <slot name="background" />
+  <div class='absolute top-0 bottom-0 '>
+    <slot name='background' />
   </div>
 </section>
